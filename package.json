@@ -2,19 +2,41 @@
   "name": "bootleg-react",
   "version": "1.0.0",
   "description": "A tiny, home‑rolled React clone built from scratch to showcase how modern component-based UI frameworks work under the hood. This repo explores JSX-like rendering, a simplified virtual DOM, and basic state management—without relying on the real React library.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "vitest",
+    "dev": "vite",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akoreh/bootleg-react.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "virtual-dom",
+    "jsx",
+    "educational"
+  ],
   "author": "Andrei Koreh",
   "license": "MIT",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/akoreh/bootleg-react/issues"
   },
-  "homepage": "https://github.com/akoreh/bootleg-react#readme"
+  "homepage": "https://github.com/akoreh/bootleg-react#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.7",
+    "vitest": "^1.0.4"
+  }
 }
