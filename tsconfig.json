@@ -9,8 +9,7 @@
     "isolatedModules": true,
     "noEmit": true,
 
-    "jsx": "react-jsx",
-    "jsxImportSource": "bootleg-react",
+    "jsx": "preserve",
 
     "strict": true,
     "noUnusedLocals": true,
@@ -26,8 +25,9 @@
     "paths": {
       "bootleg-react": ["./src/index.ts"],
       "bootleg-react/*": ["./src/*"]
-    }
+    },
+    "types": ["./src/jsx.d.ts"]
   },
-  "include": ["src/**/*", "examples/**/*"],
+  "include": ["src/**/*", "examples/**/*", "src/jsx.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

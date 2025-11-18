@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc",
     "test": "vitest",
-    "dev": "vite",
+    "dev": "vite examples",
     "type-check": "tsc --noEmit"
   },
   "repository": {
